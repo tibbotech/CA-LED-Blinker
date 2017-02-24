@@ -1,0 +1,37 @@
+'***********************************************************************************************************
+'			LED BLINKER- YOU PUSH THE BUTTON --> LEDs PLAY PATTERN
+'***********************************************************************************************************
+'
+'	This is (perhaps) the simplest demo of Tibbo BASIC. Red LED blinks 3 times fast when you push
+'the button... at all other times the LED is green. Also, at power-up both Green and Red LEDs blink
+'together 3 times
+'
+'RD.042007
+'***********************************************************************************************************
+
+
+
+'=============================================================
+sub on_sys_init
+'This event always fires first. We use it to load power-up pattern
+	
+	pat.play("B-B-B---",PL_PAT_CANINT)
+	
+end sub
+
+
+'=============================================================
+sub on_button_pressed
+'This event executes each time you press the button.
+
+	pat.play("*R-R-R-",PL_PAT_CANINT)
+end sub
+
+
+'=============================================================
+sub on_pat
+'This event handler is entered whenever previous LED pattern finishes playing. In this project
+'this will happen after the "button" pattern is done playing.
+	
+	pat.play("~G",PL_PAT_CANINT)
+end sub
