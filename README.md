@@ -1,5 +1,3 @@
-# CA-LED-Blinker
+# LED Blinker
 
-To download the most recent project without installing GIT, please press the green "Clone or Download" button and select "Download ZIP".
-
-For more detail about this project, please visit <a href="http://tibbo.com/programmable/applications/examples/led_blinker.html" target="_blank">Project Description Page</a>
+This is one of the simplest demos of Tibbo BASIC. The red LED blinks 3 times when you push the button. At all other times the LED is green. Also, at power-up both Green and Red LEDs blink together 3 times.
